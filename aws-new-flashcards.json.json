@@ -1,0 +1,42 @@
+[
+  {
+    "pergunta": "O que é o Amazon EC2?",
+    "resposta": "Serviço de instâncias de computação em nuvem que permite executar servidores virtuais."
+  },
+  {
+    "pergunta": "Para que serve o Amazon VPC?",
+    "resposta": "Permite criar redes virtuais isoladas dentro da nuvem AWS."
+  },
+  {
+    "pergunta": "Qual a função do Amazon RDS?",
+    "resposta": "Serviço gerenciado de banco de dados relacional que suporta múltiplos mecanismos como MySQL e PostgreSQL."
+  },
+  {
+    "pergunta": "O que é o AWS Lambda?",
+    "resposta": "Serviço de computação serverless que executa código em resposta a eventos."
+  },
+  {
+    "pergunta": "Para que serve o Amazon CloudFront?",
+    "resposta": "Rede de distribuição de conteúdo (CDN) para entregar dados com baixa latência."
+  },
+  {
+    "pergunta": "Qual a finalidade do Amazon SQS?",
+    "resposta": "Serviço gerenciado de filas para desacoplar componentes de sistemas distribuídos."
+  },
+  {
+    "pergunta": "O que é o AWS Elastic Beanstalk?",
+    "resposta": "Serviço para implantação e gerenciamento automático de aplicações web."
+  },
+  {
+    "pergunta": "Para que serve o AWS Auto Scaling?",
+    "resposta": "Ajusta automaticamente o número de instâncias EC2 conforme demanda."
+  },
+  {
+    "pergunta": "O que é o AWS IAM?",
+    "resposta": "Serviço de gerenciamento de identidade e acesso para controlar permissões na AWS."
+  },
+  {
+    "pergunta": "Qual o objetivo do AWS CloudWatch?",
+    "resposta": "Monitoramento de recursos e aplicações, com logs e métricas em tempo real."
+  }
+]
