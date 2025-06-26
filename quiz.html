@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz AWS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">🏠 Início</a>
+    <a href="flashcards.html">🧠 Flashcards</a>
+    <a href="quiz.html">❓ Quiz</a>
+  </nav>
+  <h1>❓ Quiz - Amazon S3</h1>
+  <div id="quiz-container"></div>
+  <script>
+fetch('s3-quiz.json')
+  .then(res => res.json())
+  .then(questions => {
+    const container = document.getElementById('quiz-container');
+    questions.forEach((q, idx) => {
+      const div = document.createElement('div');
+      div.className = 'card';
+      let options = q.alternativas.map((alt, i) => 
+        `<label><input type="radio" name="q${idx}" value="${i}"> ${alt}</label><br>`
+      ).join('');
+      div.innerHTML = `<strong>${q.pergunta}</strong><br>${options}<button>Verificar</button><p class="resposta"></p>`;
+      div.querySelector('button').addEventListener('click', () => {
+        const selected = div.querySelector(`input[name="q${idx}"]:checked`);
+        const p = div.querySelector('.resposta');
+        if (!selected) {
+          p.textContent = "Selecione uma opção.";
+        } else if (parseInt(selected.value) === q.correta) {
+          p.textContent = "✅ Correto!";
+        } else {
+          p.textContent = "❌ Errado!";
+        }
+      });
+      container.appendChild(div);
+    });
+  });
+  </script>
+</body>
+</html>
