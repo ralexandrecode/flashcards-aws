@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flashcards AWS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">🏠 Início</a>
+    <a href="flashcards.html">🧠 Flashcards</a>
+    <a href="quiz.html">❓ Quiz</a>
+  </nav>
+  <h1>🧠 Flashcards - Amazon S3</h1>
+  <div id="flashcards-container"></div>
+  <script>
+fetch('s3-flashcards.json')
+  .then(res => res.json())
+  .then(cards => {
+    const container = document.getElementById('flashcards-container');
+    cards.forEach(card => {
+      const div = document.createElement('div');
+      div.className = 'card';
+      div.innerHTML = `<strong>❓ ${card.pergunta}</strong><p style="display:none;">${card.resposta}</p>`;
+      div.addEventListener('click', () => {
+        const p = div.querySelector('p');
+        p.style.display = p.style.display === 'none' ? 'block' : 'none';
+      });
+      container.appendChild(div);
+    });
+  });
+  </script>
+</body>
+</html>
