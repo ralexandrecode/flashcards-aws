@@ -1,0 +1,22 @@
+[
+  {
+    "pergunta": "Qual serviço do AWS é usado para hospedar objetos como imagens e vídeos?",
+    "alternativas": [
+      "EC2",
+      "EBS",
+      "S3",
+      "Lambda"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "Qual serviço AWS é ideal para funções event-driven?",
+    "alternativas": [
+      "CloudFront",
+      "S3",
+      "Lambda",
+      "RDS"
+    ],
+    "correta": 2
+  }
+]

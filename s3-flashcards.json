@@ -1,0 +1,10 @@
+[
+  {
+    "pergunta": "Qual o tipo de armazenamento S3 ideal para dados acessados com pouca frequência?",
+    "resposta": "S3 Standard-IA (Infrequent Access)"
+  },
+  {
+    "pergunta": "O que é o S3 Glacier?",
+    "resposta": "Camada de armazenamento para arquivamento, com recuperação mais lenta."
+  }
+]
